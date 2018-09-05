@@ -10,7 +10,7 @@ function BIP32Path (value) {
 }
 BIP32Path.toJSON = function () { return 'BIP32 derivation path' }
 
-const SATOSHI_MAX = 21 * 1e17
+const SATOSHI_MAX = Number.MAX_SAFE_INTEGER
 function Satoshi (value) {
   return typeforce.UInt53(value) && value <= SATOSHI_MAX
 }
